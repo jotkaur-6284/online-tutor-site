@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover Circles</title>
+    <style>
+        body {
+            height: 100vh;
+            background-color: #f4f4f4;
+            position: relative;
+        }
+        .circle {
+            width: 80px;
+            height: 80px;
+            background-color: #3498db;
+            border-radius: 50%;
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+        .details {
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            font-size: 14px;
+            white-space: nowrap;
+            display: none;
+        }
+        .circle:hover .details {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="circle" style="top: 10%; left: 20%;">1
+        <div class="details">Detail for Circle 1</div>
+    </div>
+    <div class="circle" style="top: 40%; left: 50%;">2
+        <div class="details">Detail for Circle 2</div>
+    </div>
+    <div class="circle" style="top: 70%; left: 30%;">3
+        <div class="details">Detail for Circle 3</div>
+    </div>
+    <div class="circle" style="top: 20%; left: 70%;">4
+        <div class="details">Detail for Circle 4</div>
+    </div>
+    <div class="circle" style="top: 60%; left: 80%;">5
+        <div class="details">Detail for Circle 5</div>
+    </div>
+    <div class="circle" style="top: 15%; left: 10%;">6
+        <div class="details">Detail for Circle 6</div>
+    </div>
+    <div class="circle" style="top: 50%; left: 20%;">7
+        <div class="details">Detail for Circle 7</div>
+    </div>
+    <div class="circle" style="top: 30%; left: 60%;">8
+        <div class="details">Detail for Circle 8</div>
+    </div>
+    <div class="circle" style="top: 80%; left: 50%;">9
+        <div class="details">Detail for Circle 9</div>
+    </div>
+    <div class="circle" style="top: 65%; left: 10%;">10
+        <div class="details">Detail for Circle 10</div>
+    </div>
+</body>
+</html>

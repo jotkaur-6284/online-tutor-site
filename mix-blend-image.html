@@ -1,0 +1,218 @@
+<head>
+    <style>
+        body {
+            color: white;
+            font-family: "Poppins", sans-serif;
+            margin: 0;
+            padding: 0;
+            background: black;
+        }
+
+        .mySlides {
+            display: none;
+        }
+
+        .maind {
+            height: 90vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo {
+            height: 10%;
+            width: 10%;
+        }
+
+        .outline {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+        }
+
+        .rect {
+            stroke-dashoffset: 5;
+            stroke-dasharray: 0 0 10 40 10 40;
+            transition: 0.5s;
+            stroke: #516ac2;
+        }
+
+        .after {
+            margin-top: 3%;
+            width: 80%;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .nav {
+            width: 100%;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            padding: 0.5em;
+            background: rgba(0, 0, 0, 0.833);
+            width: 100%;
+        }
+
+        .btn {
+            padding: 0.5em 1.5em;
+            color: #ededed;
+            cursor: pointer;
+            transition: 0.2s;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background: #fff3;
+        }
+
+        .centr {
+            text-align: center;
+            margin-top: 5vh;
+        }
+
+        .card {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .loader {
+            font-size: 5vh;
+        }
+
+        .input {
+            width: 80%;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            font-size: 18px;
+        }
+
+        #search-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 1024px) {
+            .maind {
+                height: auto;
+                padding: 20px;
+            }
+
+            .container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .btn {
+                display: block;
+                margin: 5px 0;
+            }
+
+            .after {
+                width: 90%;
+                text-align: center;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+
+            .btn {
+                font-size: 16px;
+                padding: 0.5em 1em;
+            }
+
+            .input {
+                width: 100%;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+                padding: 10px;
+            }
+
+            .btn {
+                font-size: 14px;
+                padding: 0.5em 1em;
+            }
+
+            .input {
+                width: 100%;
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="maind">
+        <!-- Logo -->
+        <img src="logoo.PNG" class="logo">
+
+        <!-- Navigation -->
+        <div class="nav">
+            <div class="container">
+                <a href="index.html" class="btn">Home</a>
+                <a href="chat.html" class="btn">AIChat</a>
+                <a href="teacher.html" class="btn">Online Teacher</a>
+                <a href="login.html" class="btn">Login</a>
+            </div>
+        </div>
+
+        <!-- Animated Search Bar Section -->
+        <div class="centr">
+            <div class="card">
+                <div class="loader">
+                    Search on AiMentor
+                    <div class="words">
+                        <span class="word">Books</span>
+                        <span class="word">Chapters</span>
+                        <span class="word">Classes</span>
+                        <span class="word">Notes</span>
+                        <span class="word">Teacher</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="after">
+                <p>AI assistant here to provide information, answers to questions. Enter keywords to explore our
+                    resources.</p>
+            </div>
+
+            <!-- Search Box -->
+            <div id="search-container">
+                <input class="input search-inpu" name="text" id="searchBox" type="text" placeholder="Search..." />
+            </div>
+        </div>
+    </div>
+
+    <!-- Search Box Functionality -->
+    <script>
+        document.getElementById("searchBox").addEventListener("keypress", function(event) {
+            if (event.key === "Enter") {
+                let searchText = this.value.trim();
+                if (searchText !== "") {
+                    localStorage.setItem("searchMessage", searchText); // Store message
+                    window.open("chat.html", "_blank"); // Open chatbot in new tab
+                }
+            }
+        });
+    </script>
+</body>

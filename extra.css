@@ -1,0 +1,603 @@
+/* From Uiverse.io by SelfMadeSystem */ 
+
+/* body {
+  background-image: url('https://www.shutterstock.com/shutterstock/photos/2275076235/display_1500/stock-vector-abstract-white-and-gray-color-modern-design-stripes-background-with-geometric-round-shape-vector-2275076235.jpg');
+  width: 50vh;
+} */
+
+.maind{
+  background-color: #a9c7ff;
+  height: 90vh;
+
+}
+.outline {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.rect {
+  stroke-dashoffset: 5;
+  stroke-dasharray: 0 0 10 40 10 40;
+  transition: 0.5s;
+  stroke: #080808;
+
+}
+
+.nav {
+  position: relative;
+  margin-left: 800px;
+  width: 400px;
+  height: 60px;
+}
+
+.container:hover .outline .rect {
+  transition: 999999s;
+  /* Must specify these values here as something *different* just so that the transition works properly */
+  stroke-dashoffset: 1;
+  stroke-dasharray: 0;
+}
+
+.container {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.833);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0.5em;
+}
+
+.btn {
+  padding: 0.5em 1.5em;
+  color: #241a1a;
+  cursor: pointer;
+  transition: 0.1s;
+}
+
+.btn:hover {
+  background: #fff3;
+}
+
+.btn:nth-child(1):hover ~ svg .rect {
+  stroke-dashoffset: 0;
+  stroke-dasharray: 0 2 8 73.3 8 10.7;
+}
+
+.btn:nth-child(2):hover ~ svg .rect {
+  stroke-dashoffset: 0;
+  stroke-dasharray: 0 12.6 9.5 49.3 9.5 31.6;
+}
+
+.btn:nth-child(3):hover ~ svg .rect {
+  stroke-dashoffset: 0;
+  stroke-dasharray: 0 24.5 8.5 27.5 8.5 55.5;
+}
+
+.btn:nth-child(4):hover ~ svg .rect {
+  stroke-dashoffset: 0;
+  stroke-dasharray: 0 34.7 6.9 10.2 6.9 76;
+}
+
+.btn:hover ~ .outline .rect {
+  stroke-dashoffset: 0;
+  stroke-dasharray: 0 0 10 40 10 40;
+  transition: 0.5s !important;
+}
+/* From Uiverse.io by NlghtM4re */ 
+.container2 {
+  position: absolute;
+  top: 20%;
+  margin-left: 70%;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item {
+  position: absolute;
+  background-color: transparent;
+  width: calc(var(--i) * 2.5vmin);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: .9vmin solid rgb(0, 200, 255);
+  transform-style: preserve-3d;
+  transform: rotateX(70deg) translateZ(50px);
+  animation: my-move 3s ease-in-out calc(var(--i) * 0.08s) infinite;
+  box-shadow: 0px 0px 15px rgb(124, 124, 124),
+    inset 0px 0px 15px rgb(124, 124, 124);
+}
+
+@keyframes my-move {
+  0%,
+  100% {
+    transform: rotateX(70deg) translateZ(50px) translateY(0px);
+    filter: hue-rotate(0deg);
+  }
+
+  50% {
+    transform: rotateX(70deg) translateZ(50px) translateY(-50vmin);
+    filter: hue-rotate(180deg);
+  }
+}
+/* From Uiverse.io by kennyotsu */ 
+.card {
+margin-left: 20vh;
+margin-top: 20vh;
+width: fit-content;
+border-radius: 1.25rem;
+}
+.loader {
+color: rgb(26, 23, 23);
+font-family: "Poppins", sans-serif;
+font-size: 5vh;
+height: 30px;
+padding: 10px 10px;
+display: -webkit-box;
+display: -ms-flexbox;
+display: flex;
+border-radius: 8px;
+
+/* background-color: rgb(193, 139, 69); */
+}
+
+.words {
+overflow: hidden;
+position: relative;
+}
+.words::after {
+content: "";
+position: absolute;
+inset: 0;
+background: linear-gradient(
+  var(--bg-color) 10%,
+  transparent 30%,
+  transparent 70%,
+  var(--bg-color) 90%
+);
+z-index: 20;
+}
+
+.word {
+display: block;
+height: 10vh;
+padding-left: 6px;
+
+/* background-color: antiquewhite; */
+color: #956afa;
+animation: spin_4991 4s infinite;
+}
+
+@keyframes spin_4991 {
+10% {
+  -webkit-transform: translateY(-102%);
+  transform: translateY(-102%);
+}
+
+25% {
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
+}
+
+35% {
+  -webkit-transform: translateY(-202%);
+  transform: translateY(-202%);
+}
+
+50% {
+  -webkit-transform: translateY(-200%);
+  transform: translateY(-200%);
+}
+
+60% {
+  -webkit-transform: translateY(-302%);
+  transform: translateY(-302%);
+}
+
+75% {
+  -webkit-transform: translateY(-300%);
+  transform: translateY(-300%);
+}
+
+85% {
+  -webkit-transform: translateY(-402%);
+  transform: translateY(-402%);
+}
+
+100% {
+  -webkit-transform: translateY(-400%);
+  transform: translateY(-400%);
+}
+}
+
+/* From Uiverse.io by Amankrah */ 
+.galaxy {
+height: 800px;
+width: 800px;
+background-image: radial-gradient(#ef0000ef 1px, transparent 1px),
+  radial-gradient(#ffffff 1px, transparent 6px);
+/* background-size: 50px 50px; */
+/* background-position:
+  0 0,
+  25px 25px; */
+position: absolute;
+z-index: -1;
+/* animation: twinkle 5s infinite; */
+} 
+
+ @keyframes twinkle {
+0%,
+100% {
+  opacity: 0.5;
+}
+50% {
+  opacity: 1;
+}
+}
+
+.stardust,
+.cosmic-ring,
+.starfield,
+.nebula {
+max-height: 70px;
+max-width: 314px;
+height: 100%;
+width: 100%;
+position: absolute;
+overflow: hidden;
+z-index: -1;
+border-radius: 12px;
+filter: blur(3px);
+}
+
+.input {
+background-color: #05071b;
+border: none;
+width: 301px;
+height: 56px;
+border-radius: 10px;
+color: #a9c7ff;
+padding-inline: 59px;
+font-size: 18px;
+}
+
+#search-container {
+display: flex;
+align-items: center;
+margin-top: 5vh;
+margin-left: 30vh;
+/* justify-content: center; */
+}
+
+.input::placeholder {
+color: #6e8cff;
+}
+
+.input:focus {
+outline: none;
+}
+
+#main:focus-within > #input-mask {
+display: none;
+}
+
+#input-mask {
+pointer-events: none;
+width: 100px;
+height: 20px;
+position: absolute;
+background: linear-gradient(90deg, transparent, #05071b);
+top: 18px;
+left: 70px;
+}
+
+#cosmic-glow {
+pointer-events: none;
+width: 30px;
+height: 20px;
+position: absolute;
+background: #4d6dff;
+top: 10px;
+left: 5px;
+filter: blur(20px);
+opacity: 0.8;
+transition: all 2s;
+}
+
+#main:hover > #cosmic-glow {
+opacity: 0;
+}
+
+.stardust {
+max-height: 63px;
+max-width: 307px;
+border-radius: 10px;
+filter: blur(2px);
+}
+
+.stardust::before {
+content: "";
+z-index: -2;
+text-align: center;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%) rotate(83deg);
+position: absolute;
+width: 600px;
+height: 600px;
+background-repeat: no-repeat;
+background-position: 0 0;
+filter: brightness(1.4);
+background-image: conic-gradient(
+  rgba(0, 0, 0, 0) 0%,
+  #4d6dff,
+  rgba(0, 0, 0, 0) 8%,
+  rgba(0, 0, 0, 0) 50%,
+  #6e8cff,
+  rgba(0, 0, 0, 0) 58%
+);
+transition: all 2s;
+}
+
+.cosmic-ring {
+max-height: 59px;
+max-width: 303px;
+border-radius: 11px;
+filter: blur(0.5px);
+}
+
+.cosmic-ring::before {
+content: "";
+z-index: -2;
+text-align: center;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%) rotate(70deg);
+position: absolute;
+width: 600px;
+height: 600px;
+filter: brightness(1.3);
+background-repeat: no-repeat;
+background-position: 0 0;
+background-image: conic-gradient(
+  #05071b,
+  #4d6dff 5%,
+  #05071b 14%,
+  #05071b 50%,
+  #6e8cff 60%,
+  #05071b 64%
+);
+transition: all 2s;
+}
+
+.starfield {
+max-height: 65px;
+max-width: 312px;
+}
+
+.starfield::before {
+content: "";
+z-index: -2;
+text-align: center;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%) rotate(82deg);
+position: absolute;
+width: 600px;
+height: 600px;
+background-repeat: no-repeat;
+background-position: 0 0;
+background-image: conic-gradient(
+  rgba(0, 0, 0, 0),
+  #1c2452,
+  rgba(0, 0, 0, 0) 10%,
+  rgba(0, 0, 0, 0) 50%,
+  #2a3875,
+  rgba(0, 0, 0, 0) 60%
+);
+transition: all 2s;
+}
+
+#search-container:hover > .starfield::before {
+transform: translate(-50%, -50%) rotate(-98deg);
+}
+
+#search-container:hover > .nebula::before {
+transform: translate(-50%, -50%) rotate(-120deg);
+}
+
+#search-container:hover > .stardust::before {
+transform: translate(-50%, -50%) rotate(-97deg);
+}
+
+#search-container:hover > .cosmic-ring::before {
+transform: translate(-50%, -50%) rotate(-110deg);
+}
+
+#search-container:focus-within > .starfield::before {
+transform: translate(-50%, -50%) rotate(442deg);
+transition: all 4s;
+}
+
+#search-container:focus-within > .nebula::before {
+transform: translate(-50%, -50%) rotate(420deg);
+transition: all 4s;
+}
+
+#search-container:focus-within > .stardust::before {
+transform: translate(-50%, -50%) rotate(443deg);
+transition: all 4s;
+}
+
+#search-container:focus-within > .cosmic-ring::before {
+transform: translate(-50%, -50%) rotate(430deg);
+transition: all 4s;
+}
+
+.nebula {
+overflow: hidden;
+filter: blur(30px);
+opacity: 0.4;
+max-height: 130px;
+max-width: 354px;
+}
+
+.nebula:before {
+content: "";
+z-index: -2;
+text-align: center;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%) rotate(60deg);
+position: absolute;
+width: 999px;
+height: 999px;
+background-repeat: no-repeat;
+background-position: 0 0;
+background-image: conic-gradient(
+  #000,
+  #4d6dff 5%,
+  #000 38%,
+  #000 50%,
+  #6e8cff 60%,
+  #000 87%
+);
+transition: all 2s;
+}
+
+#wormhole-icon {
+position: absolute;
+top: 8px;
+right: 8px;
+display: flex;
+align-items: center;
+justify-content: center;
+z-index: 2;
+max-height: 40px;
+max-width: 38px;
+height: 100%;
+width: 100%;
+isolation: isolate;
+overflow: hidden;
+border-radius: 10px;
+background: linear-gradient(180deg, #1c2452, #05071b, #2a3875);
+border: 1px solid transparent;
+}
+
+.wormhole-border {
+height: 42px;
+width: 40px;
+position: absolute;
+overflow: hidden;
+top: 7px;
+right: 7px;
+border-radius: 10px;
+}
+
+.wormhole-border::before {
+content: "";
+text-align: center;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%) rotate(90deg);
+position: absolute;
+width: 600px;
+height: 600px;
+background-repeat: no-repeat;
+background-position: 0 0;
+filter: brightness(1.35);
+background-image: conic-gradient(
+  rgba(0, 0, 0, 0),
+  #4d6dff,
+  rgba(0, 0, 0, 0) 50%,
+  rgba(0, 0, 0, 0) 50%,
+  #6e8cff,
+  rgba(0, 0, 0, 0) 100%
+);
+animation: rotate 4s linear infinite;
+}
+
+#main {
+position: relative;
+}
+
+#search-icon {
+position: absolute;
+left: 20px;
+top: 15px;
+}
+
+@keyframes rotate {
+100% {
+  transform: translate(-50%, -50%) rotate(450deg);
+}
+}
+
+/* 
+ */
+ 
+.wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  
+}
+
+.inner {
+  --w: 300px;
+  --h: 300px;
+  --translateZ: calc((var(--w) + var(--h)) + 0px);
+  --rotateX: -5deg;
+  --perspective: 10000px;
+  position: absolute;
+  width: var(--w);
+  height: var(--h);
+  left: calc(50% - (var(--w) / 2) - 2.5px);
+  z-index: 1;
+  transform-style: preserve-3d;
+  transform: perspective(var(--perspective));
+  animation: rotating 50s linear infinite; /* */
+}
+@keyframes rotating {
+  from {
+    transform: perspective(var(--perspective)) rotateX(var(--rotateX))
+      rotateY(0);
+  }
+  to {
+    transform: perspective(var(--perspective)) rotateX(var(--rotateX))
+      rotateY(1turn);
+  }
+}
+
+.card {
+  position: absolute;
+  border: 2px solid rgba(var(--color-card));
+  border-radius: 12px;
+  overflow: hidden;
+  inset: 0;
+  transform: rotateY(calc((360deg / var(--quantity)) * var(--index)))
+    translateZ(var(--translateZ));
+    backface-visibility: hidden;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background: #0000
+    radial-gradient(
+      circle,
+      rgba(var(--color-card), 0.2) 0%,
+      rgba(var(--color-card), 0.6) 80%,
+      rgba(var(--color-card), 0.9) 100%
+    );
+}
